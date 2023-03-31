@@ -28,13 +28,13 @@ describe('Feature Perform an Order', () => {
         const item= "3";
         await invetoryPage.addToCartItem(item);
 
-    },25000);
+    },20000);
 
     it('Purchase', async () => {
 
         await invetoryPage.clickplaceOrderButton();
 
-    },25000);
+    },20000);
 
     it('Place an Order', async () => {
         const name= 'Karen Lopez';
@@ -47,6 +47,6 @@ describe('Feature Perform an Order', () => {
         await placeOrder.placeOrder(name,country,city,creditCard,month,year);
         await placeOrder.clickOkButton()
 
-    },35000);
+    },30000);
 
 });

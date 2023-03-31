@@ -1,6 +1,7 @@
 import { url } from "inspector";
 import { driverInstance } from "../src/core/driver";
 import { Login } from "../src/pages/login";
+import { userData } from "../user-data";
 
 
 describe('Set Login', () => {
@@ -23,7 +24,7 @@ describe('Set Login', () => {
 
     it('Set Login', async () => {
   
-        await login.login('karenlq', '6522903Lq');
+        await login.login(userData.username, userData.password);
              
     },8000);
 
