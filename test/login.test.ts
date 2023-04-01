@@ -22,9 +22,11 @@ describe('Set Login', () => {
         
     },8000);
 
-    it('Set Login', async () => {
+    test('Set Login', async () => {
   
         await login.login(userData.username, userData.password);
+        const isDisplayedWelcome = await login.validatelogin();
+        expect (isDisplayedWelcome).toBeTruthy();
              
     },8000);
 

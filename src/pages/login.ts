@@ -7,7 +7,7 @@ export class Login extends BasePage{
     private username: string = '#loginusername';
     private password: string = '#loginpassword';
     private loginButton: string = '//button[@class="btn btn-primary"][text()="Log in"]';
-    
+    private welcomeTab: string = '#nameofuser';
     constructor(){
         super();
     }
@@ -19,6 +19,11 @@ export class Login extends BasePage{
         await this.driver.Page.click(this.loginButton);
         await driverInstance.Page.waitForTimeout(5000);
         
+    }
+
+    async validatelogin() {
+
+        return this.driver.isElementDisplayed(this.welcomeTab);
     }
 }
 export const login = new Login ();
