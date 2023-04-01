@@ -24,19 +24,22 @@ describe('Feature Perform an Order', () => {
 
     });
 
-    it('Add an item', async () => {
-        const item= "3";
+    test('Add an item', async () => {
+        const item= "5";
         await invetoryPage.addToCartItem(item);
+        const isDisplayedDelete = await invetoryPage.validateItemAdded();
+        expect (isDisplayedDelete).toBeFalsy();
+    },10000);
 
-    },20000);
-
-    it('Purchase', async () => {
+    test('Purchase', async () => {
 
         await invetoryPage.clickplaceOrderButton();
+        const isDisplayedPurchase = await placeOrder.validatePurchaseButton();        
+        expect(isDisplayedPurchase).toBeFalsy();
 
-    },20000);
+    },10000);
 
-    it('Place an Order', async () => {
+    test('Place an Order', async () => {
         const name= 'Karen Lopez';
         const country= 'Bolivia';
         const city= 'Cochabamba';
@@ -46,7 +49,9 @@ describe('Feature Perform an Order', () => {
 
         await placeOrder.placeOrder(name,country,city,creditCard,month,year);
         await placeOrder.clickOkButton()
+        const actualCompleteMessage = await placeOrder.getCompleteOrderMessage();
+        expect(actualCompleteMessage).toBe("Thank you for your purchase!");
 
-    },30000);
+    },35000);
 
 });

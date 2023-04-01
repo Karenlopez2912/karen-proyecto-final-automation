@@ -12,6 +12,7 @@ export class InventoryPage extends BasePage {
     private itemAddCartButton = (item: string) => `//a[@onclick="addToCart(${item})"]`;
     private itemRemoveCartButton =   '//tbody[@id="tbodyid"]//tr[1]//td[4]//a';
     private placeOrderButton: string = '//button[@class="btn btn-success"]';
+    private totalButton: string= '//h3[@class="panel-title"]';
     
 
     async addToCartItem(item: string) {
@@ -21,11 +22,16 @@ export class InventoryPage extends BasePage {
         await this.driver.Page.click(this.shoppingCartBadge);
     }
 
-    async validateRemoveButton() {
+    async validateItemAdded() {
 
-        await this.driver.Page.click(this.shoppingCartBadge);
         return this.driver.isElementDisplayed(this.itemRemoveCartButton);
     }
+
+    async getTotalshopping() {
+        
+        return await this.driver.Page.innerText(this.totalButton);
+
+    }    
 
     async deleteItem() {
         
@@ -34,7 +40,5 @@ export class InventoryPage extends BasePage {
 
     async clickplaceOrderButton() {
        return await this.driver.Page.click(this.placeOrderButton);
-    }
-
-    
+    }    
 }

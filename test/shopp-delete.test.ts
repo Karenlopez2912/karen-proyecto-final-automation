@@ -21,19 +21,22 @@ describe('Shop-Delete Feature', () => {
         await driverInstance.closeDriver();
     });
 
-    it('Add Products Items from Inventory Table', async () => {
+    test('Add Products Items from Inventory Table', async () => {
         const item= "1"
         await invetoryPage.addToCartItem(item);
-        
+        const isDisplayedDelete = await invetoryPage.validateItemAdded();
+        expect (isDisplayedDelete).toBeFalsy();
     },10000);
 
-    it('Delete Item from CartBadge', async () => {        
+    test('Delete Item from CartBadge', async () => {        
         await invetoryPage.deleteItem();
-       
-    },10000);
+        const isDisplayedDelete = await invetoryPage.validateItemAdded();
+        expect (isDisplayedDelete).toBeTruthy();
+    },20000);
 
-    it('Logout the page', async () => {        
+    test('Logout the page', async () => {        
         await checkoutPage.checkoutPage();
-        
+        const isDisplayedlogin = await checkoutPage.validateLoginTab();
+        expect (isDisplayedlogin).toBeTruthy();
     },10000);
 });

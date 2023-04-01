@@ -35,5 +35,10 @@ export class PlaceOrder extends BasePage{
 
         return await this.driver.Page.click(this.okButton);
     }
+
+    async validatePurchaseButton() {
+
+        return this.driver.isElementDisplayed(this.purchaseButton);
+    }
 }
 export const placeorder = new PlaceOrder();
