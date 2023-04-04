@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680318985355" clover="3.2.0">
-  <project timestamp="1680318985356" name="All files">
+<coverage generated="1680610748469" clover="3.2.0">
+  <project timestamp="1680610748469" name="All files">
     <metrics statements="228" coveredstatements="220" conditionals="28" coveredconditionals="27" methods="30" coveredmethods="27" elements="286" coveredelements="274" complexity="0" loc="228" ncloc="228" packages="3" files="7" classes="7"/>
     <package name="karen-proyecto-final-automation">
       <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
