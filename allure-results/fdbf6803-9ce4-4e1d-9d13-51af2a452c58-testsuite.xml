@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680635606368' stop='1680635624634'>
+    <name>Feature Perform an Order</name>
+    <title>Feature Perform an Order</title>
+    <test-cases>
+        <test-case start='1680635619277' status='failed' stop='1680635622477'>
+            <name>Add an item</name>
+            <title>Add an item</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toBeTruthy()
+                
+                Received: false</message>
+                <stack-trace>Error: expect(received).toBeTruthy()
+                
+                Received: false
+                    at D:\karen-proyecto-final-automation\tests\e2e.test.ts:31:34
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (D:\karen-proyecto-final-automation\tests\e2e.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1680635622477' status='passed' stop='1680635622856'>
+            <name>Purchase</name>
+            <title>Purchase</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680635622857' status='passed' stop='1680635623893'>
+            <name>Place an Order</name>
+            <title>Place an Order</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

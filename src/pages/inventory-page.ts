@@ -10,7 +10,7 @@ export class InventoryPage extends BasePage {
 
     private itemNameButton = (item: string) => `//h4[@class="card-title"]//a[@href="prod.html?idp_=${item}"]`;
     private itemAddCartButton = (item: string) => `//a[@onclick="addToCart(${item})"]`;
-    private itemRemoveCartButton =   '//tbody[@id="tbodyid"]//tr[1]//td[4]//a';
+    private itemCartButton =   '#tbodyid';
     private placeOrderButton: string = '//button[@class="btn btn-success"]';
     private totalButton: string= '//h3[@class="panel-title"]';
     
@@ -24,7 +24,7 @@ export class InventoryPage extends BasePage {
 
     async validateItemAdded() {
 
-        return this.driver.isElementDisplayed(this.itemRemoveCartButton);
+        return this.driver.isElementDisplayed(this.itemCartButton);
     }
 
     async getTotalshopping() {
@@ -35,7 +35,7 @@ export class InventoryPage extends BasePage {
 
     async deleteItem() {
         
-        return await this.driver.Page.click(this.itemRemoveCartButton);
+        return await this.driver.Page.click(this.itemCartButton);
     }
 
     async clickplaceOrderButton() {

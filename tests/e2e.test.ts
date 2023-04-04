@@ -27,8 +27,8 @@ describe('Feature Perform an Order', () => {
     test('Add an item', async () => {
         const item= "5";
         await invetoryPage.addToCartItem(item);
-        const isDisplayedDelete = await invetoryPage.validateItemAdded();
-        expect (isDisplayedDelete).toBeFalsy();
+        const isDisplayeditem = await invetoryPage.validateItemAdded();
+        expect (isDisplayeditem).toBeFalsy();
     },10000);
 
     test('Purchase', async () => {

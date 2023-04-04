@@ -24,14 +24,14 @@ describe('Shop-Delete Feature', () => {
     test('Add Products Items from Inventory Table', async () => {
         const item= "1"
         await invetoryPage.addToCartItem(item);
-        const isDisplayedDelete = await invetoryPage.validateItemAdded();
-        expect (isDisplayedDelete).toBeFalsy();
+        const isDisplayeditem = await invetoryPage.validateItemAdded();
+        expect (isDisplayeditem).toBeFalsy();
     },10000);
 
     test('Delete Item from CartBadge', async () => {        
         await invetoryPage.deleteItem();
-        const isDisplayedDelete = await invetoryPage.validateItemAdded();
-        expect (isDisplayedDelete).toBeTruthy();
+        const isDisplayeditem = await invetoryPage.validateItemAdded();
+        expect (isDisplayeditem).toBeTruthy();
     },20000);
 
     test('Logout the page', async () => {        
