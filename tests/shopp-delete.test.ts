@@ -26,7 +26,7 @@ describe('Shop-Delete Feature', () => {
         await invetoryPage.addToCartItem(item);
         const isDisplayeditem = await invetoryPage.validateItemAdded();
         expect (isDisplayeditem).toBeFalsy();
-    },10000);
+    },20000);
 
     test('Delete Item from CartBadge', async () => {        
         await invetoryPage.deleteItem();

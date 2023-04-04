@@ -1,0 +1,83 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680636829453' stop='1680636873711'>
+    <name>Shop-Delete Feature</name>
+    <title>Shop-Delete Feature</title>
+    <test-cases>
+        <test-case start='1680636840653' status='passed' stop='1680636842677'>
+            <name>Add Products Items from Inventory Table</name>
+            <title>Add Products Items from Inventory Table</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680636842677' status='failed' stop='1680636872690'>
+            <name>Delete Item from CartBadge</name>
+            <title>Delete Item from CartBadge</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.
+                    at new Spec (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\Spec.js:107:22)
+                    at new Spec (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\setup_jest_globals.js:69:9)
+                    at specFactory (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\Env.js:398:22)
+                    at Env.it (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\Env.js:449:22)
+                    at Env.it (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:143:23)
+                    at it (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:67:21)
+                    at Suite.&lt;anonymous> (D:\karen-proyecto-final-automation\tests\shopp-delete.test.ts:31:5)
+                    at addSpecsToSuite (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\Env.js:356:49)
+                    at Env.describe (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\Env.js:331:9)
+                    at describe (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:58:18)
+                    at Object.&lt;anonymous> (D:\karen-proyecto-final-automation\tests\shopp-delete.test.ts:6:1)
+                    at Runtime._execModule (D:\karen-proyecto-final-automation\node_modules\jest-runtime\build\index.js:1429:24)
+                    at Runtime._loadModule (D:\karen-proyecto-final-automation\node_modules\jest-runtime\build\index.js:1013:12)
+                    at Runtime.requireModule (D:\karen-proyecto-final-automation\node_modules\jest-runtime\build\index.js:873:12)
+                    at jasmine2 (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\index.js:195:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+                    at async runTestInternal (D:\karen-proyecto-final-automation\node_modules\jest-runner\build\runTest.js:367:16)
+                    at async runTest (D:\karen-proyecto-final-automation\node_modules\jest-runner\build\runTest.js:444:34)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1680636872690' status='failed' stop='1680636873138'>
+            <name>Logout the page</name>
+            <title>Logout the page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for locator('#tbodyid')
+                  locator resolved to &lt;tbody id="tbodyid">↵            &lt;/tbody>
+                attempting click action
+                  waiting for element to be visible, enabled and stable
+                    element is not visible - waiting...
+                ============================================================</message>
+                <stack-trace>page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for locator('#tbodyid')
+                  locator resolved to &lt;tbody id="tbodyid">↵            &lt;/tbody>
+                attempting click action
+                  waiting for element to be visible, enabled and stable
+                    element is not visible - waiting...
+                ============================================================
+                    at InventoryPage.&lt;anonymous> (D:\karen-proyecto-final-automation\src\pages\inventory-page.ts:38:39)
+                    at D:\karen-proyecto-final-automation\src\pages\inventory-page.ts:8:71
+                    at Object.&lt;anonymous>.__awaiter (D:\karen-proyecto-final-automation\src\pages\inventory-page.ts:4:12)
+                    at InventoryPage.deleteItem (D:\karen-proyecto-final-automation\src\pages\inventory-page.ts:42:16)
+                    at D:\karen-proyecto-final-automation\tests\shopp-delete.test.ts:32:28
+                    at D:\karen-proyecto-final-automation\tests\shopp-delete.test.ts:8:71
+                    at Object.&lt;anonymous>.__awaiter (D:\karen-proyecto-final-automation\tests\shopp-delete.test.ts:4:12)
+                    at Object.&lt;anonymous> (D:\karen-proyecto-final-automation\tests\shopp-delete.test.ts:31:51)
+                    at Object.asyncJestTest (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:116:37)
+                    at D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\queueRunner.js:35:12
+                    at mapper (D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\queueRunner.js:22:19)
+                    at D:\karen-proyecto-final-automation\node_modules\jest-jasmine2\build\queueRunner.js:62:41</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
