@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo 'Cloning...'
-				git branch: 'main', url: 'https://github.com/agonzales411/ariel-lab-6-mod-3-e2e.git'				
+				git branch: 'main', url: 'https://github.com/Karenlopez2912/karen-proyecto-final-automation.git'				
             }
         }
         stage('Review Repo') {

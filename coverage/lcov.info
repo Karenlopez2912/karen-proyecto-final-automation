@@ -43,7 +43,7 @@ FNDA:3,Driver
 FNDA:3,start
 FNDA:36,get Page
 FNDA:3,getInstance
-FNDA:6,isElementDisplayed
+FNDA:5,isElementDisplayed
 FNDA:3,closeDriver
 FNDA:3,browserFactory
 DA:1,1
@@ -79,10 +79,10 @@ DA:30,3
 DA:31,3
 DA:32,3
 DA:33,1
-DA:34,6
-DA:35,6
-DA:36,6
-DA:37,6
+DA:34,5
+DA:35,5
+DA:36,5
+DA:37,5
 DA:38,1
 DA:39,3
 DA:40,3
@@ -107,7 +107,7 @@ BRDA:11,0,0,3
 BRDA:13,1,0,3
 BRDA:24,2,0,36
 BRDA:27,3,0,3
-BRDA:33,4,0,6
+BRDA:33,4,0,5
 BRDA:38,5,0,3
 BRDA:43,6,0,3
 BRDA:49,7,0,0
@@ -202,7 +202,7 @@ FNDA:2,InventoryPage
 FNDA:2,InventoryPage.itemNameButton
 FNDA:2,InventoryPage.itemAddCartButton
 FNDA:2,addToCartItem
-FNDA:3,validateItemAdded
+FNDA:2,validateItemAdded
 FNDA:0,getTotalshopping
 FNDA:1,deleteItem
 FNDA:1,clickplaceOrderButton
@@ -231,9 +231,9 @@ DA:22,2
 DA:23,2
 DA:24,1
 DA:25,1
-DA:26,3
-DA:27,3
-DA:28,3
+DA:26,2
+DA:27,2
+DA:28,2
 DA:29,1
 DA:30,1
 DA:31,0
@@ -256,7 +256,7 @@ BRDA:7,0,0,2
 BRDA:11,1,0,2
 BRDA:12,2,0,2
 BRDA:18,3,0,2
-BRDA:25,4,0,3
+BRDA:25,4,0,2
 BRDA:36,5,0,1
 BRDA:41,6,0,1
 BRF:7
