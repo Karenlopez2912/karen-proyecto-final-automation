@@ -1,4 +1,5 @@
 import { Driver, driverInstance } from "../core/driver";
+import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base-pages";
 
 export class PlaceOrder extends BasePage{
@@ -18,27 +19,28 @@ export class PlaceOrder extends BasePage{
     }
     async placeOrder(name: string, country: string, city: string, creditCard: string, month: string, year: string) {
 
-        await this.driver.Page.fill(this.name, name);
-        await this.driver.Page.fill(this.country, country );
-        await this.driver.Page.fill(this.city, city );
-        await this.driver.Page.fill(this.creditCard, creditCard );
-        await this.driver.Page.fill(this.month, month );
-        await this.driver.Page.fill(this.year, year );
-        await this.driver.Page.click(this.purchaseButton);    
+        await ElementActions.setTex(this.name, name);
+        await ElementActions.setTex(this.country, country );
+        await ElementActions.setTex(this.city, city );
+        await ElementActions.setTex(this.creditCard, creditCard );
+        await ElementActions.setTex(this.month, month );
+        await ElementActions.setTex(this.year, year );
+        await ElementActions.clickElement(this.purchaseButton);    
     }
 
-    async getCompleteOrderMessage() {
-
-        return await this.driver.Page.innerText(this.mesaggePurchase);
-    }
     async clickOkButton() {
 
-        return await this.driver.Page.click(this.okButton);
+        return await ElementActions.clickElement(this.okButton);
     }
 
     async validatePurchaseButton() {
 
-        return this.driver.isElementDisplayed(this.purchaseButton);
+        return driverInstance.Page.isVisible(this.purchaseButton);
+    }
+
+    async getCompleteOrderMessage() {
+
+        return await driverInstance.Page.innerText(this.mesaggePurchase);
     }
 }
 export const placeorder = new PlaceOrder();

@@ -1,3 +1,5 @@
+import { driverInstance } from "../core/driver";
+import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base-pages";
 
 export class CheckoutPage extends BasePage {
@@ -9,10 +11,10 @@ export class CheckoutPage extends BasePage {
     }
     async checkoutPage() {
         
-        await this.driver.Page.click(this.logoutbutton);
+        await ElementActions.clickElement(this.logoutbutton);
     }
     async validateLoginTab() {
 
-        return this.driver.isElementDisplayed(this.logintab);
+        return driverInstance.Page.isVisible(this.logintab);
     }
 }

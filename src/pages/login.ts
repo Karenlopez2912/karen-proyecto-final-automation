@@ -1,4 +1,5 @@
 import { Driver, driverInstance } from "../core/driver";
+import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base-pages";
 
 export class Login extends BasePage{
@@ -13,17 +14,17 @@ export class Login extends BasePage{
     }
     async login(username: string, password: string) {
 
-        await this.driver.Page.click(this.logintab);
-        await this.driver.Page.fill(this.username, username);
-        await this.driver.Page.fill(this.password, password );
-        await this.driver.Page.click(this.loginButton);
-        await driverInstance.Page.waitForTimeout(5000);
+        await ElementActions.clickElement(this.logintab);
+        await ElementActions.setTex(this.username, username);
+        await ElementActions.setTex(this.password, password );
+        await ElementActions.clickElement(this.loginButton);
+        await ElementActions.wait();
         
     }
 
     async validatelogin() {
 
-        return this.driver.isElementDisplayed(this.welcomeTab);
+        return driverInstance.Page.isVisible(this.welcomeTab);
     }
 }
 export const login = new Login ();

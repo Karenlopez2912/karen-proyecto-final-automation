@@ -1,3 +1,5 @@
+import { driverInstance } from "../core/driver";
+import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base-pages";
 
 export class InventoryPage extends BasePage {
@@ -17,28 +19,28 @@ export class InventoryPage extends BasePage {
 
     async addToCartItem(item: string) {
 
-        await this.driver.Page.click(this.itemNameButton(item));
-        await this.driver.Page.click(this.itemAddCartButton(item));
-        await this.driver.Page.click(this.shoppingCartBadge);
-    }
-
-    async validateItemAdded() {
-
-        return this.driver.isElementDisplayed(this.itemCartButton);
-    }
+        await ElementActions.clickElement(this.itemNameButton(item));
+        await ElementActions.clickElement(this.itemAddCartButton(item));
+        await ElementActions.clickElement(this.shoppingCartBadge);
+    } 
 
     async getTotalshopping() {
         
-        return await this.driver.Page.innerText(this.totalButton);
+        return await ElementActions.getText(this.totalButton);
 
     }    
 
     async deleteItem() {
         
-        return await this.driver.Page.click(this.itemCartButton);
+        return await ElementActions.clickElement(this.itemCartButton);
     }
 
     async clickplaceOrderButton() {
-       return await this.driver.Page.click(this.placeOrderButton);
-    }    
+       return await ElementActions.clickElement(this.placeOrderButton);
+    }  
+    
+    async validateItemAdded() {
+
+        return driverInstance.Page.isVisible(this.itemCartButton);
+    }
 }

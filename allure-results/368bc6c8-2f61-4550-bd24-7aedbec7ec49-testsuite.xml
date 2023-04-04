@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680644814021' stop='1680644824886'>
+    <name>Set Login</name>
+    <title>Set Login</title>
+    <test-cases>
+        <test-case start='1680644815744' status='passed' stop='1680644818776'>
+            <name>Go to Login page</name>
+            <title>Go to Login page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680644818776' status='failed' stop='1680644824474'>
+            <name>Set Login</name>
+            <title>Set Login</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toBeTruthy()
+                
+                Received: undefined</message>
+                <stack-trace>Error: expect(received).toBeTruthy()
+                
+                Received: undefined
+                    at D:\karen-proyecto-final-automation\tests\login.test.ts:29:37
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (D:\karen-proyecto-final-automation\tests\login.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
